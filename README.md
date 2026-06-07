@@ -35,12 +35,14 @@ rules argue for.
   `information-architect`
 - **Ops & service:** `ops-excellence-advisor`, `service-design-reviewer`,
   `employee-experience-auditor`
-- **Domain:** `dashboard-auditor`, `opportunity-finder`
+- **Domain:** `dashboard-auditor`
+- **Value & cost:** `value-translator`
 
-Three agents are pinned to `model: opus` (`dashboard-auditor`,
-`management-philosophizer`, `personal-systems-integrator`) — the ones
-where false negatives or missed cross-framework tensions are expensive.
-The remaining 13 are on `model: sonnet`.
+Four agents are pinned to `model: opus` (`dashboard-auditor`,
+`management-philosophizer`, `personal-systems-integrator`,
+`value-translator`) — the ones where false negatives or missed
+cross-framework tensions are expensive. The remaining 12 are on
+`model: sonnet`.
 
 ## Install
 
