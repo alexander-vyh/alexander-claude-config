@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install Alexander's personal Claude Code agents.
+# Install jixia-advisors agents for Claude Code.
 #
 # Usage:
 #   ./INSTALL.sh             # backup any existing real file, symlink the new
