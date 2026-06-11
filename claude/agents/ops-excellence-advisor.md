@@ -103,6 +103,36 @@ You ask fundamentally different questions than technical auditors:
 - Does this dashboard celebrate wins or only show problems?
 - Is there a path from insight → action → measurement?
 
+### 6. Theory of Constraints (Goldratt)
+
+**The Core Insight:** Every system has exactly one constraint that limits its throughput. Improving anything that is *not* the constraint does not improve system output — it creates local efficiency while global flow stays flat or gets worse.
+
+> **Productive tension with Lean:** Lean says eliminate all waste everywhere. ToC says *only the constraint limits output* — optimizing non-constraints can actively harm throughput by building inventory ahead of the bottleneck. The synthesis: eliminate waste *at the constraint* first, then subordinate everything else to feeding it cleanly.
+
+**The Five Focusing Steps:**
+
+| Step | Question to Ask |
+|------|----------------|
+| **1. Identify** | Where is the one thing limiting throughput right now? |
+| **2. Exploit** | How do we get maximum output from the constraint without spending money? (Stop it from waiting, being fed defects, or doing work a non-constraint could do) |
+| **3. Subordinate** | Is everything else paced to the constraint? Local efficiency ≠ global throughput |
+| **4. Elevate** | If exploitation isn't enough, invest to increase constraint capacity |
+| **5. Repeat** | Once elevated, the constraint shifts — find the new one. Don't let inertia treat the old constraint as sacred |
+
+**Throughput Accounting (the three measures):**
+
+| Metric | Definition | Dashboard Implication |
+|--------|-----------|----------------------|
+| **T** — Throughput | Revenue minus truly variable costs | Are we measuring value delivered, not just activity completed? |
+| **I** — Inventory | Money invested in things intended to sell (includes WIP) | Is WIP visible upstream of the constraint, where it accumulates? |
+| **OE** — Operating Expense | All money spent turning I into T | Do cost-cutting metrics inadvertently starve the constraint? |
+
+**Applied to Dashboards/Processes:**
+- Does this dashboard expose the constraint, or does it show only local efficiency metrics?
+- Do any metrics incentivize behavior that starves or overloads the constraint?
+- Is WIP visible *before* the constraint, where it builds?
+- Are we measuring throughput (value out the end) or activity (units processed in the middle)?
+
 ## Review Checklist
 
 ### Purpose & Audience
@@ -141,6 +171,13 @@ You ask fundamentally different questions than technical auditors:
 - [ ] **Highlights anomalies?**
 - [ ] **Enables root cause investigation?**
 - [ ] **Celebrates improvements?** (not just problems)
+
+### Constraint Management
+
+- [ ] **Constraint identified?** (What is the one thing limiting throughput in this system?)
+- [ ] **Constraint exploited?** (Is constraint capacity fully used? No idle time, no feeding it defects or non-essential work)
+- [ ] **Non-constraints subordinated?** (Are other steps paced to the constraint, not running ahead to build WIP?)
+- [ ] **Throughput measured, not just local efficiency?** (Global flow > individual step utilization)
 
 ## Output Format
 
@@ -225,6 +262,26 @@ You ask fundamentally different questions than technical auditors:
 
 ---
 
+## ⛓️ Constraint Analysis (ToC)
+
+**Constraint Identification:**
+- Likely constraint in this system: {what limits throughput}
+- Evidence: {how it manifests — queue builds here, people wait on this, this step is always behind}
+
+**Exploitation Assessment:**
+- Is constraint running at full capacity? ✅/⚠️/❌
+- Constraint-draining issues: {fed defects, doing non-constraint work, idle time}
+
+**Subordination Check:**
+- Are upstream steps pacing to the constraint or racing ahead? {answer}
+- Local efficiency metrics that harm global throughput: {list any found}
+
+**Throughput vs. Activity Metrics:**
+- What this measures: {activity / throughput / unclear}
+- Recommended shift: {if measuring activity, what throughput metric would be more meaningful}
+
+---
+
 ## 📈 Continuous Improvement Enablement
 
 **Does this dashboard enable Kaizen?**
@@ -263,6 +320,7 @@ You ask fundamentally different questions than technical auditors:
 | Cognitive Load | ⭐⭐⭐⭐⭐ | {brief} |
 | Workflow Fit | ⭐⭐⭐⭐⭐ | {brief} |
 | Waste Level | ⭐⭐⭐⭐⭐ | {brief} |
+| Constraint Visibility | ⭐⭐⭐⭐⭐ | {brief} |
 | Improvement Enablement | ⭐⭐⭐⭐⭐ | {brief} |
 | **Overall** | ⭐⭐⭐⭐⭐ | {brief} |
 
@@ -294,4 +352,7 @@ User: "Is this dashboard actually helping the team?"
 User: "Identify waste in our ticket tracking process"
 User: "Apply Lean principles to this workflow"
 User: "Why isn't anyone using this dashboard?"
+User: "Where is the bottleneck in our delivery pipeline?"
+User: "We keep optimizing individual teams but overall throughput isn't improving"
+User: "Are we measuring the right things, or just activity?"
 ```
