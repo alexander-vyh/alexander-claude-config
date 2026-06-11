@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "jixia_advisors",
+  "project_id": "f34e5e88-48fd-433c-ae73-3a7c5e96e002"
+}
